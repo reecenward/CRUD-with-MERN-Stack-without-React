@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(28, 28, 28);
+    overflow-x: hidden;
+    color: white;
+}
+
+#box {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#textbox {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    position: fixed;
+    background-color: rgb(28, 28, 28);
+    box-shadow: 0px 2px 50px 50px rgb(28, 28, 28);
+    top: auto;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+#myForm {
+    width: 35vw;
+    display: flex;
+    align-items: center;
+}
+
+#item {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(43, 43, 46);
+    color: aliceblue;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 25px;
+    box-shadow: 0px 0px 10px #161616;
+}
+
+#item:focus {
+    outline: none;
+}
+
+#submit {
+    margin-left: -35px;
+    width: auto;
+    border-radius: 5px;
+    height: 100%;
+    color: white;
+    background-color: rgb(43, 43, 46);
+    border: none;
+    box-shadow: 0px 0px 5px #161616;
+}
+
+#submit:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+#poop-list {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin-right: 25px;
+}
+
+li {
+    margin-left: 25px;
+}
+
+#poopy {
+    justify-content: space-between;
+    width: 30vw;
+    height: 50px;
+    background-color: rgb(43, 43, 46);
+    box-shadow: 0px 0px 10px #161616;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#buttonz {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#my-input {
+    background-color: rgb(43, 43, 46);
+    color: white;
+    font-size: 16px;
+}
+
+#megadelete {
+    background-color: rgb(228, 86, 86);
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    margin-left: 25px;
+    font-weight: 800;
+    font-size: medium;
+    color: rgb(81, 24, 24);
+}
