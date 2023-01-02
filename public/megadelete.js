@@ -1,7 +1,7 @@
-const buton = document.querySelector('#megadelete');
+const button = document.querySelector('#megaDelete');
 
-buton.addEventListener('click', () => {
-    fetch('/route/del/y', {
+button.addEventListener('click', () => {
+    fetch('/adminRoute/megaDelete/yes', {
             method: 'DELETE'
         })
         .then(response => response.json())

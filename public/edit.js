@@ -1,6 +1,6 @@
 function editItem(id, input) {
     console.log({ item: input });
-    fetch(`/route/${id}`, {
+    fetch(`/adminRoute/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

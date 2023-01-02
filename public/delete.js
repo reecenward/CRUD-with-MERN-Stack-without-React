@@ -1,5 +1,5 @@
 function deleteItem(id) {
-    fetch(`/route/${id}`, {
+    fetch(`/adminRoute/${id}`, {
             method: 'DELETE'
         })
         .then(response => {

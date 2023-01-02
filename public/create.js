@@ -8,7 +8,7 @@ form.addEventListener('submit', event => {
     document.getElementById('item').value = '';
     console.log(data);
     console.log('working' + JSON.stringify(data));
-    fetch('/route', {
+    fetch('/adminRoute', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,8 +16,8 @@ form.addEventListener('submit', event => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
+        .then(location.reload())
         .catch(error => {
             // Handle any errors
         });
-    location.reload();
 });

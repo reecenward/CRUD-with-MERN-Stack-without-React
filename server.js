@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const poopRoute = require("./routes/poopRoutes");
+const adminRoute = require("./routes/adminRoutes");
+const userRoute = require("./routes/userRoutes");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/route', poopRoute);
+app.use('/adminRoute', adminRoute);
+app.use('/userRoute', userRoute);
 
 // Serve the files in the public folder as static assets
 app.use('/public', express.static('public'));
@@ -15,6 +17,11 @@ app.use('/public', express.static('public'));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
+
+app.get('/user', (req, res) => {
+    res.sendFile(__dirname + '/public/user/index.html');
+});
+
 
 // Start the server and listen for incoming requests
 app.listen(4000, () => {

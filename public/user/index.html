@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
+    <title>User</title>
     <link rel="stylesheet" href="/public/styles.css">
-    <script src="/public/delete.js"></script>
-    <script src="/public/getItems.js"></script>
-    <script src="/public/edit.js"></script>
-
 </head>
 
 <body>
     <div id="box">
+        <my-counter id='counter' count="What are you looking for?"></my-counter>
+
         <div id="poop-list">
             <ul id="item-list"></ul>
         </div>
@@ -23,12 +21,9 @@
             <form id="myForm">
                 <input type="text" id="item" name="item" pattern="[a-zA-Z0-9]+" autofocus required><br>
                 <input type="submit" id="submit" value=">">
-                <script src="/public/create.js"></script>
+                <script src="/public/user/finditem.js"></script>
             </form>
-            <button id="megaDelete">Mega Delete</button>
-            <script src="/public/megaDelete.js"></script>
         </div>
-
     </div>
 </body>
 

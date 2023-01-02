@@ -1,5 +1,5 @@
 function getItems() {
-    fetch('/route')
+    fetch('/adminRoute')
         .then(response => response.json())
         .then((items) => {
             // Update the item list on the page

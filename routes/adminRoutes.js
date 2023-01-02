@@ -1,16 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require('mongoose');
-require('dotenv').config();
-
-//connect to the database
-mongoose.connect(process.env.API_KEY);
-
-//Create a schema
-var poopSchema = new mongoose.Schema({
-    item: String
-});
-var Poop = mongoose.model('Poop', poopSchema);
+const Poop = require('../model/Poop');
 
 router.get('/', function(req, res) {
     // Query the database for all items
@@ -76,7 +66,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-router.delete('/del/y', (req, res) => {
+router.delete('/megaDelete/yes', (req, res) => {
     //delete all items from mongodb
     Poop.deleteMany({}, function(err) {
         if (err) {
