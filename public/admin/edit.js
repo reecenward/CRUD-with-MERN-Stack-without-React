@@ -1,11 +1,14 @@
 function editItem(id, input) {
     console.log({ item: input });
+    console.log(id)
     fetch(`/adminRoute/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ item: input })
+            body: JSON.stringify({ items: [input] })
+
+
         })
         .then(response => {
             console.log(response); // Log the response from the server
@@ -13,7 +16,6 @@ function editItem(id, input) {
         })
         .then(data => {
             console.log(data); // Log the data returned by the server
-            //alert(data.message); // Show a message indicating that the item was updated in the database
             location.reload(); // Reload the page to update the item list
         });
 }

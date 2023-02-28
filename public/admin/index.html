@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="/public/admin/styles.css">
+    <script src="/public/admin/delete.js"></script>
+    <script src="/public/admin/edit.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <script>
+        fetch('/username')
+            .then(response => response.json())
+            .then(data => {
+                const {
+                    username
+                } = data;
+                console.log("user: " + username);
+
+                if (username) {
+                    const h1 = document.getElementById("username");
+                    h1.textContent = `Hello, ${username}`;
+                    document.getElementById("youruserpage").href = `/user/${username}`;
+                    const qrcode = new QRCode(document.getElementById('qrcode'), {
+                        text: `http://localhost:4000/user/${username}`,
+                        width: 128,
+                        height: 128,
+                        colorDark: '#000',
+                        colorLight: '#fff',
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                }
+            });
+    </script>
+</head>
+
+<body>
+
+    <a href="/logout">Log out</a>
+    <br>
+    <br>
+    <div id="qrcode"></div>
+    <br>
+    <a href="/" id="youruserpage">Your user page</a>
+
+
+
+    <div id="box">
+
+        <h1 id="username"></h1>
+
+        <div id="poop-list">
+            <ul id="item-list"></ul>
+            <script src="/public/admin/getItems.js"></script>
+        </div>
+
+        <div id="textbox">
+            <form id="myForm">
+
+
+                <input type="text" id="item" name="item" placeholder="Ex: Apples" pattern="[a-zA-Z0-9]+" autofocus required><br>
+
+                <input type="submit" id="submit" value=">">
+                <script src="/public/admin/create.js"></script>
+            </form>
+            <button id="megaDelete">Mega Delete</button>
+            <script src="/public/admin/megaDelete.js"></script>
+        </div>
+    </div>
+    <div id="spacer"></div>
+</body>
+
+</html>

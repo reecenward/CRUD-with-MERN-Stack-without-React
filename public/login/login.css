@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(28, 28, 28);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: white;
+}
+
+#box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#textbox {
+    width: 500px;
+    height: 25vh;
+    display: flex;
+    background-color: rgb(85, 85, 85);
+    box-shadow: 0px 2px 50px 50px rgb(28, 28, 28);
+    align-items: center;
+    justify-content: center;
+}
+
+#myForm {
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
